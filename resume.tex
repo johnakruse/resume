@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\def\dot{\textbullet\ }
+
+\moderncvstyle{banking}
+\moderncvcolor{red}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.75]{geometry}
+
+%patch to get rid of annoying space between address and contact info
+\makeatletter
+\patchcmd{\makehead}{%search
+    \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\\null}{%replace
+    \flushmakeheaddetails\@firstmakeheaddetailselementtrue\par\vspace{-\baselineskip}\null}{%success
+    }{%failure
+    }
+\makeatother
+
+\name{John}{Kruse}
+\title{Developer}
+\address{5227 Thornridge Ct}{Sterling Heights, MI, 48314}{USA}
+\phone[mobile]{+1~(586)~850~8519}
+\email{johnalphonsekruse@gmail.com}
+\social[github]{johnakruse}
+\social[linkedin]{johnkruse}
+
+\begin{document}
+\makecvtitle
+
+\section{Software}
+\begin{center}
+Linux \dot Windows \dot git \dot bash/zsh
+
+Selenium \dot GitLab \dot JMeter \dot SQL \dot LaTeX \dot HTML
+
+numpy \dot scipy \dot pandas
+\end{center}
+
+\section{Programming Languages}
+\cvlistdoubleitem{Python}{R}
+\cvlistdoubleitem{C}{Java}
+
+\section{Experience}
+\cventry{May 2015 - Apr 2017}{Student Developer}{Oakland University Technology Services}{}{}{Web Development, Testing, Automation}%
+\begin{itemize}%
+\item Collaborated on development of features for student, staff and faculty portal
+    \begin{itemize}
+    \item utilized Java, HTML, javascript, Spring and SQL for portlet development
+    \item tested  services and portlets using JMeter for load testing
+    \item collaborated with other developers through the internal use of GitLab 
+    and git, faithfully adhering to a system of organized issue reporting and 
+    branching
+    \end{itemize}
+\item Independently planned, designed and documented a system for document migration
+    \begin{itemize}%
+    \item used Linux utilities such as wget, along with shell scripting to scrape
+    from old, web-based system
+    \item automated the conversion and indexing of scraped files, finding the 
+    relevant data in html code with scripts when available, and making SQL queries
+    to an Oracle database with the cx\_Oracle from Python for additional data
+    \item automated the upload of documents, which required the use of a web 
+    interface, by employing the browser automation and testing framework Selenium 
+    and its Python library, streamlining the process while still allowing for 
+    visual verification
+    \item managed project entirely with git, including writing documentation and 
+    guides on using the software for potential future employees
+    \end{itemize}
+\end{itemize}
+\cventry{Sep 2014 - Dec 2014}{Grader}{Oakland University Department of Mathematics and Statistics}{}{}{}
+\begin{itemize}
+\item Worked as a grader for two professors teaching precalculus
+    \begin{itemize}
+    \item Regularly corresponded with professors on a weekly basis
+    \item Followed outlined grading procedures given by professor, or devised own when required
+    \item Found and verified solutions where no answer key existed
+    \end{itemize}
+\end{itemize}
+
+\section{Education}
+\cventry{2012-2017}{Mathematics, B.Sc}{Oakland University}{}{}{Minor in Computer Science, Minor in Chinese Language}
+\cventry{March 2014 - July 2014}{Chinese language certificate}{China Foreign Affairs University}{Beijing, China}{}{}
+\cventry{}{}{Coursera, edX}{}{}{Completed various massive open online courses (MOOCs) relating to data science, programming and mathematics from universities including insititutions such as Harvard and University of Michigan. Learned how to use python and R in statitistical analysis.}
+
+\section{Other Skills and Interests}
+\begin{center}
+Intermediate Chinese \dot Intermediate French
+
+Statistics \dot Linguistics
+\end{center}
+
+\section{Other Experience}
+President of Oakland University National Chinese Honor Society\\
+Treasurer of Oakland University Society of Physics Students
+
+\end{document}
